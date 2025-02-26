@@ -10,11 +10,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class App {
+public class DecodeKey {
     private static final VigenereCipherBreaker cipherBreaker = new VigenereCipherBreaker();
     private static final KasiskiAnalyzer kasiskiAnalyzer = new KasiskiAnalyzer();
 
-    // ANSI renk kodları
     private static final String ANSI_RED = "\u001B[31m";
     private static final String ANSI_RESET = "\u001B[0m";
 
@@ -25,7 +24,7 @@ public class App {
             
             
             // read from mogambo.txt
-            scanner = new Scanner(App.class.getResourceAsStream("/mogambo.txt"));
+            scanner = new Scanner(DecodeKey.class.getResourceAsStream("/mogambo.txt"));
             StringBuilder sb = new StringBuilder();
             while (scanner.hasNextLine()) {
                 sb.append(scanner.nextLine());
